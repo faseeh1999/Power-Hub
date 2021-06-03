@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "524594096515",
+    "project_id": "power-hub-d8e17",
+    "storage_bucket": "power-hub-d8e17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524594096515:android:1dea1ba5792cc401e7aeb6",
+        "android_client_info": {
+          "package_name": "com.example.power_hub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524594096515-29get6o5261aln09du6lgp09ptb286ou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjmNznU5kesihADD9_AnfNQuty1jsINE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524594096515-29get6o5261aln09du6lgp09ptb286ou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
