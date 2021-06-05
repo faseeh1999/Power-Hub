@@ -1,17 +1,22 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 
-class Splash extends StatefulWidget {
-  @override
-  _SplashState createState() => _SplashState();
-}
+import 'package:page_transition/page_transition.dart';
+import 'package:power_hub/introduction.dart';
+import 'package:power_hub/colors.dart';
 
-class _SplashState extends State<Splash> {
+class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Power Hub"),
-      ),
+    Size size = MediaQuery.of(context).size;
+    return AnimatedSplashScreen(
+      duration: 3000,
+      backgroundColor: kprimary,
+      splash: 'assets/splash.png',
+      splashIconSize: size.width,
+      nextScreen: Introduction(),
+      splashTransition: SplashTransition.fadeTransition,
+      pageTransitionType: PageTransitionType.scale,
     );
   }
 }
