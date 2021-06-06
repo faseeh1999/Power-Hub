@@ -39,6 +39,7 @@ dependencies:
   provider: ^3.1.0
   flutter_spinkit: ^4.1.2
   animated_splash_screen:
+  fl_chart:
 
 dev_dependencies:
   flutter_test:

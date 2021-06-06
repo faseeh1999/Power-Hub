@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:power_hub/chartTest.dart';
 import 'package:power_hub/home.dart';
 import 'package:power_hub/login.dart';
 import 'package:power_hub/user.dart';

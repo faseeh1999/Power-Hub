@@ -1,7 +1,9 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:power_hub/auth.dart';
+import 'package:power_hub/chartTest.dart';
 import 'package:power_hub/colors.dart';
 import 'package:power_hub/loader.dart';
 
@@ -48,6 +50,15 @@ class _HomeState extends State<Home> {
                           letterSpacing: 1.0,
                           fontSize: size.width * 0.04,
                         )))
+              ],
+            ),
+            body: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: LineChartSample2(),
+                )
               ],
             ),
           );
