@@ -53,9 +53,17 @@ class _HomeState extends State<Home> {
               ],
             ),
             body: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Padding(
+                  padding: EdgeInsets.all(size.width * 0.05),
+                  child: Text(
+                    "Without Error",
+                    style: GoogleFonts.poppins(
+                        color: kTextColor, fontSize: size.width * 0.1),
+                  ),
+                ),
                 Center(
                   child: LineChartSample2(),
                 )
