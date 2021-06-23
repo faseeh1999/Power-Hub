@@ -1,11 +1,17 @@
+import 'package:animated_button/animated_button.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:power_hub/anim.dart';
 import 'package:power_hub/auth.dart';
 import 'package:power_hub/chartTest.dart';
 import 'package:power_hub/colors.dart';
 import 'package:power_hub/loader.dart';
+import 'package:power_hub/splash.dart';
+import 'package:power_hub/state.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -52,40 +58,51 @@ class _HomeState extends State<Home> {
                         )))
               ],
             ),
-            body: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(size.width * 0.05),
-                    child: Text(
-                      "Start Power Hub",
-                      style: GoogleFonts.poppins(
-                          color: kTextColor, fontSize: size.width * 0.1),
+            body: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: size.height * 0.1,
+                ),
+                Text(
+                  "Start Power Hub",
+                  style: GoogleFonts.poppins(
+                      color: kTextColor, fontSize: size.width * 0.1),
+                ),
+                SizedBox(
+                  height: size.height * 0.3,
+                ),
+                Center(
+                  child: AnimatedButton(
+                    shadowDegree: ShadowDegree.dark,
+                    duration: 100,
+                    enabled: true,
+                    shape: BoxShape.circle,
+                    height: size.height * 0.2,
+                    width: size.width * 0.4,
+                    color: kLineColor,
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          PageTransition(
+                              child: CenterState(),
+                              type: PageTransitionType.fade));
+                    },
+                    child: Icon(
+                      Icons.power_settings_new_outlined,
+                      color: kprimary,
+                      size: size.width * 0.2,
                     ),
+                    // style: ElevatedButton.styleFrom(
+                    //   shape: CircleBorder(),
+                    //   padding: EdgeInsets.all(20),
+                    //   primary: kLineColor, // <-- Button color
+                    //   onPrimary: Colors.red, // <-- Splash color
+                    // ),
                   ),
-                  SizedBox(height: size.height * 0.03),
-                  ConstrainedBox(
-                    constraints:
-                        BoxConstraints.tightFor(width: 200, height: 200),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.power_settings_new_outlined,
-                        color: kprimary,
-                        size: size.width * 0.2,
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        shape: CircleBorder(),
-                        padding: EdgeInsets.all(20),
-                        primary: kLineColor, // <-- Button color
-                        onPrimary: Colors.red, // <-- Splash color
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           );
   }
