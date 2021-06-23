@@ -52,22 +52,40 @@ class _HomeState extends State<Home> {
                         )))
               ],
             ),
-            body: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(size.width * 0.05),
-                  child: Text(
-                    "Without Error",
-                    style: GoogleFonts.poppins(
-                        color: kTextColor, fontSize: size.width * 0.1),
+            body: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(size.width * 0.05),
+                    child: Text(
+                      "Start Power Hub",
+                      style: GoogleFonts.poppins(
+                          color: kTextColor, fontSize: size.width * 0.1),
+                    ),
                   ),
-                ),
-                Center(
-                  child: LineChartSample2(),
-                )
-              ],
+                  SizedBox(height: size.height * 0.03),
+                  ConstrainedBox(
+                    constraints:
+                        BoxConstraints.tightFor(width: 200, height: 200),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Icon(
+                        Icons.power_settings_new_outlined,
+                        color: kprimary,
+                        size: size.width * 0.2,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(20),
+                        primary: kLineColor, // <-- Button color
+                        onPrimary: Colors.red, // <-- Splash color
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
   }
