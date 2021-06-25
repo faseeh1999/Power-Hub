@@ -10,8 +10,9 @@ class LineChartSample2 extends StatefulWidget {
 class _LineChartSample2State extends State<LineChartSample2> {
   List<Color> gradientColors = [
     //const Color(0xff23b6e6),
-    const Color(0xff02d39a),
-    kLineColor,
+
+    kGraphLineColor,
+    kGraphLineColor
   ];
 
   bool showAvg = false;
@@ -27,7 +28,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
                 borderRadius: BorderRadius.all(
                   Radius.circular(18),
                 ),
-                color: Color(0xff2c2e4f)),
+                color: Colors.white),
             child: Padding(
               padding: const EdgeInsets.only(
                   right: 18.0, left: 12.0, top: 24, bottom: 12),
@@ -51,7 +52,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
               style: TextStyle(
                   fontSize: 12,
                   color:
-                      showAvg ? Colors.white.withOpacity(0.5) : Colors.white),
+                      showAvg ? Colors.black.withOpacity(0.5) : Colors.black),
             ),
           ),
         ),
@@ -66,13 +67,13 @@ class _LineChartSample2State extends State<LineChartSample2> {
         drawVerticalLine: true,
         getDrawingHorizontalLine: (value) {
           return FlLine(
-            color: const Color(0xff37434d),
+            color: Colors.black,
             strokeWidth: 1,
           );
         },
         getDrawingVerticalLine: (value) {
           return FlLine(
-            color: const Color(0xff37434d),
+            color: Colors.black,
             strokeWidth: 1,
           );
         },
@@ -89,11 +90,13 @@ class _LineChartSample2State extends State<LineChartSample2> {
           getTitles: (value) {
             switch (value.toInt()) {
               case 2:
-                return 'MAR';
-              case 5:
-                return 'JUN';
+                return '0.050';
+              case 4:
+                return '0.100';
+              case 6:
+                return '0.150';
               case 8:
-                return 'SEP';
+                return '0.200';
             }
             return '';
           },
@@ -108,12 +111,14 @@ class _LineChartSample2State extends State<LineChartSample2> {
           ),
           getTitles: (value) {
             switch (value.toInt()) {
+              case 0:
+                return '-0.100';
               case 1:
-                return '10k';
+                return '0.200';
               case 3:
-                return '30k';
+                return '0.400';
               case 5:
-                return '50k';
+                return '0.600';
             }
             return '';
           },
@@ -126,8 +131,8 @@ class _LineChartSample2State extends State<LineChartSample2> {
           border: Border.all(color: const Color(0xff37434d), width: 1)),
       minX: 0.000,
       maxX: 0.200,
-      minY: 0.0000,
-      maxY: 0.6000,
+      minY: -0.100,
+      maxY: 1.100,
       lineBarsData: [
         LineChartBarData(
           spots: [
@@ -389,11 +394,13 @@ class _LineChartSample2State extends State<LineChartSample2> {
           getTitles: (value) {
             switch (value.toInt()) {
               case 2:
-                return 'MAR';
-              case 5:
-                return 'JUN';
+                return '0.050';
+              case 4:
+                return '0.100';
+              case 6:
+                return '0.150';
               case 8:
-                return 'SEP';
+                return '0.200';
             }
             return '';
           },
@@ -409,11 +416,17 @@ class _LineChartSample2State extends State<LineChartSample2> {
           getTitles: (value) {
             switch (value.toInt()) {
               case 1:
-                return '10k';
+                return '0.200';
+              case 2:
+                return '0.400';
               case 3:
-                return '30k';
+                return '0.600';
+
+              case 4:
+                return '0.800';
+
               case 5:
-                return '50k';
+                return '1.000';
             }
             return '';
           },

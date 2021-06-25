@@ -93,8 +93,12 @@ class _Screen1State extends State<Screen1> {
             ],
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Hola"),
+              Center(
+                child: Expanded(child: LineChartSample2()),
+              )
             ],
           )
         ]),
