@@ -16,50 +16,109 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
-        title: Text(
-          "Power Hub",
-          style: GoogleFonts.poppins(
-              color: kTextColor,
-              fontSize: size.width * 0.08,
-              letterSpacing: 1.0),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        bottomNavigationBar: menu(),
+        appBar: AppBar(
+          elevation: 0.0,
+          backgroundColor: Colors.transparent,
+          title: Text(
+            "Power Hub",
+            style: GoogleFonts.poppins(
+                color: kTextColor,
+                fontSize: size.width * 0.08,
+                letterSpacing: 1.0),
+          ),
+          actions: [
+            FlatButton.icon(
+                onPressed: () async {
+                  setState(() {
+                    isLoading = true;
+                  });
+                  await _auth.signOut();
+                },
+                icon: Icon(
+                  FontAwesomeIcons.signOutAlt,
+                  color: kLineColor,
+                ),
+                label: Text("Logout",
+                    style: GoogleFonts.poppins(
+                      color: kLineColor,
+                      letterSpacing: 1.0,
+                      fontSize: size.width * 0.04,
+                    )))
+          ],
         ),
-        actions: [
-          FlatButton.icon(
-              onPressed: () async {
-                setState(() {
-                  isLoading = true;
-                });
-                await _auth.signOut();
-              },
-              icon: Icon(
-                FontAwesomeIcons.signOutAlt,
-                color: kLineColor,
+        backgroundColor: kprimary,
+        body: TabBarView(children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: size.height * 0.03,
               ),
-              label: Text("Logout",
-                  style: GoogleFonts.poppins(
-                    color: kLineColor,
-                    letterSpacing: 1.0,
-                    fontSize: size.width * 0.04,
-                  )))
-        ],
-      ),
-      backgroundColor: kprimary,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Without Error",
-            style: TextStyle(color: kTextColor),
+              Text(
+                "Circuit Diagrams",
+                style: GoogleFonts.poppins(
+                    color: kTextColor, fontSize: size.width * 0.08),
+              ),
+              SizedBox(
+                height: size.height * 0.03,
+              ),
+              Text(
+                "Inverter of HVDC",
+                style: GoogleFonts.poppins(
+                    color: kTextColor, fontSize: size.width * 0.05),
+              ),
+              SizedBox(
+                height: size.height * 0.03,
+              ),
+              Text(
+                "Without Commutation Failure",
+                style: GoogleFonts.poppins(
+                    color: kTextColor, fontSize: size.width * 0.05),
+              ),
+              SizedBox(
+                height: size.height * 0.1,
+              ),
+              Container(
+                child: FittedBox(
+                    fit: BoxFit.cover,
+                    child: Image.asset(
+                      'assets/one1.PNG',
+                    )),
+              ),
+            ],
           ),
-          Center(
-            child: LineChartSample2(),
-          ),
-        ],
+          Column(
+            children: [
+              Text("Hola"),
+            ],
+          )
+        ]),
       ),
     );
   }
+}
+
+Widget menu() {
+  return Material(
+    color: kprimary,
+    child: TabBar(
+      labelColor: kTextColor,
+      indicatorColor: kTextColor,
+      tabs: [
+        Tab(
+          text: "Circuits",
+          icon: Icon(Icons.electrical_services),
+        ),
+        Tab(
+          text: "Graphs",
+          icon: Icon(Icons.insights_outlined),
+        ),
+      ],
+    ),
+  );
 }
