@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:power_hub/auth.dart';
-import 'package:power_hub/chartTest.dart';
-import 'package:power_hub/colors.dart';
+import 'package:power_hub/services/auth.dart';
+import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
+import 'package:power_hub/shared/colors.dart';
 
 class Screen1 extends StatefulWidget {
   @override
@@ -21,6 +21,7 @@ class _Screen1State extends State<Screen1> {
       child: Scaffold(
         bottomNavigationBar: menu(),
         appBar: AppBar(
+          centerTitle: true,
           elevation: 0.0,
           backgroundColor: Colors.transparent,
           title: Text(
@@ -30,25 +31,25 @@ class _Screen1State extends State<Screen1> {
                 fontSize: size.width * 0.08,
                 letterSpacing: 1.0),
           ),
-          actions: [
-            FlatButton.icon(
-                onPressed: () async {
-                  setState(() {
-                    isLoading = true;
-                  });
-                  await _auth.signOut();
-                },
-                icon: Icon(
-                  FontAwesomeIcons.signOutAlt,
-                  color: kLineColor,
-                ),
-                label: Text("Logout",
-                    style: GoogleFonts.poppins(
-                      color: kLineColor,
-                      letterSpacing: 1.0,
-                      fontSize: size.width * 0.04,
-                    )))
-          ],
+          // actions: [
+          //   FlatButton.icon(
+          //       onPressed: () async {
+          //         setState(() {
+          //           isLoading = true;
+          //         });
+          //         await _auth.signOut();
+          //       },
+          //       icon: Icon(
+          //         FontAwesomeIcons.signOutAlt,
+          //         color: kLineColor,
+          //       ),
+          //       label: Text("Logout",
+          //           style: GoogleFonts.poppins(
+          //             color: kLineColor,
+          //             letterSpacing: 1.0,
+          //             fontSize: size.width * 0.04,
+          //           )))
+          // ],
         ),
         backgroundColor: kprimary,
         body: TabBarView(children: [

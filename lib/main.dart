@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:power_hub/auth.dart';
-import 'package:power_hub/splash.dart';
+import 'package:power_hub/services/auth.dart';
+import 'package:power_hub/screens/splash.dart';
 import 'package:provider/provider.dart';
 
 void main() {

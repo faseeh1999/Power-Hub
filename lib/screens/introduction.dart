@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:power_hub/colors.dart';
-import 'package:power_hub/wrapper.dart';
+import 'package:power_hub/shared/colors.dart';
+import 'package:power_hub/authentication/wrapper.dart';
 
 class Introduction extends StatelessWidget {
   List<PageViewModel> getPages() {
     return [
       PageViewModel(
           image: Image.asset('assets/is1.png'),
-          title: "Find all about your Health.",
+          title: "Visualize Commutation Failure Eradication.",
           body:
-              "Enable Yourself to find all the necessary information about specific diseases and symptoms.",
+              "Visualize the design of a converter circuit that eliminates Commutation Failure in LCC HVDC Systems.",
           decoration: PageDecoration(
             pageColor: kprimary,
             titleTextStyle: GoogleFonts.poppins(
@@ -22,9 +22,9 @@ class Introduction extends StatelessWidget {
           )),
       PageViewModel(
           image: Image.asset('assets/is2.png'),
-          title: "Acquire all the information needed.",
+          title: "Deploying Controllable Capacitor.",
           body:
-              "Find all the relevent information about each disease listed, along with details, symptoms and much more.",
+              "We have implemented thyristor based controllable capacitor module to remove commutation failure.",
           decoration: PageDecoration(
             pageColor: kprimary,
             titleTextStyle: GoogleFonts.poppins(
@@ -37,9 +37,9 @@ class Introduction extends StatelessWidget {
           )),
       PageViewModel(
           image: Image.asset('assets/is3.png'),
-          title: "Diagnose Your Diseases",
+          title: "Visualize Beautiful Graphs of Circuit.",
           body:
-              "Now, using Healthify app you can diagnose your current disease with symptoms, it will provide a list of possible diseases.",
+              "Now, using Line Graph API we have implemented different graphs of different circuits within the app.",
           decoration: PageDecoration(
             pageColor: kprimary,
             titleTextStyle: GoogleFonts.poppins(

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:form_validator/form_validator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:power_hub/auth.dart';
-import 'package:power_hub/colors.dart';
-import 'package:power_hub/forgotPassword.dart';
-import 'package:power_hub/loader.dart';
+import 'package:power_hub/services/auth.dart';
+import 'package:power_hub/shared/colors.dart';
+import 'package:power_hub/services/forgotPassword.dart';
+import 'package:power_hub/shared/loader.dart';
 
 class Login extends StatefulWidget {
   @override

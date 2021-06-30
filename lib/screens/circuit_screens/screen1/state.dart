@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:page_transition/page_transition.dart';
 
-import 'package:power_hub/colors.dart';
-import 'package:power_hub/screen1.dart';
+import 'package:power_hub/shared/colors.dart';
+import 'package:power_hub/screens/circuit_screens/screen1/screen1.dart';
 
 class CenterState extends StatelessWidget {
   @override

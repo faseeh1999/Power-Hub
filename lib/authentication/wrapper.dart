@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:power_hub/chartTest.dart';
-import 'package:power_hub/home.dart';
-import 'package:power_hub/login.dart';
-import 'package:power_hub/user.dart';
+import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
+import 'package:power_hub/screens/home.dart';
+import 'package:power_hub/authentication/login.dart';
+import 'package:power_hub/models/user.dart';
 import 'package:provider/provider.dart';
 
 class Wrapper extends StatelessWidget {

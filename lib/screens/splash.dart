@@ -2,8 +2,8 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:page_transition/page_transition.dart';
-import 'package:power_hub/introduction.dart';
-import 'package:power_hub/colors.dart';
+import 'package:power_hub/screens/introduction.dart';
+import 'package:power_hub/shared/colors.dart';
 
 class Splash extends StatelessWidget {
   @override
