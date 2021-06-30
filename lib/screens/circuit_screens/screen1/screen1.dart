@@ -84,11 +84,9 @@ class _Screen1State extends State<Screen1> {
                 height: size.height * 0.1,
               ),
               Container(
-                child: FittedBox(
-                    fit: BoxFit.cover,
-                    child: Image.asset(
-                      'assets/one1.PNG',
-                    )),
+                child: Image.asset(
+                  'assets/one1.PNG',
+                ),
               ),
             ],
           ),

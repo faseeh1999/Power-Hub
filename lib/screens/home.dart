@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:power_hub/anim.dart';
-import 'package:power_hub/auth.dart';
-import 'package:power_hub/chartTest.dart';
-import 'package:power_hub/colors.dart';
-import 'package:power_hub/loader.dart';
-import 'package:power_hub/splash.dart';
-import 'package:power_hub/state.dart';
+
+import 'package:power_hub/services/auth.dart';
+import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
+import 'package:power_hub/shared/colors.dart';
+import 'package:power_hub/shared/loader.dart';
+import 'package:power_hub/screens/splash.dart';
+import 'package:power_hub/screens/circuit_screens/screen1/state.dart';
 
 class Home extends StatefulWidget {
   @override
