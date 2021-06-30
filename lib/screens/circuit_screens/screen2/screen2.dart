@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:power_hub/screens/circuit_screens/screen2/screen2.dart';
+import 'package:power_hub/screens/circuit_screens/screen3/screen3.dart';
 import 'package:power_hub/services/auth.dart';
 import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
 import 'package:power_hub/shared/colors.dart';
 
-class Screen1 extends StatefulWidget {
+class Screen2 extends StatefulWidget {
   @override
-  _Screen1State createState() => _Screen1State();
+  _Screen2State createState() => _Screen2State();
 }
 
-class _Screen1State extends State<Screen1> {
+class _Screen2State extends State<Screen2> {
   AuthService _auth = AuthService();
   bool isLoading = false;
   @override
@@ -79,7 +78,7 @@ class _Screen1State extends State<Screen1> {
                 height: size.height * 0.03,
               ),
               Text(
-                "Without Commutation Failure",
+                "Commutation Failure Introduced",
                 style: GoogleFonts.poppins(
                     color: kTextColor, fontSize: size.width * 0.05),
               ),
@@ -88,7 +87,7 @@ class _Screen1State extends State<Screen1> {
               ),
               Container(
                 child: Image.asset(
-                  'assets/one1.PNG',
+                  'assets/two.PNG',
                 ),
               ),
             ],
@@ -104,16 +103,14 @@ class _Screen1State extends State<Screen1> {
           )
         ]),
         floatingActionButton: FloatingActionButton.extended(
-          label: Text(
-            "Apply Error",
-            style: GoogleFonts.poppins(
-                color: kTextColor, fontWeight: FontWeight.bold),
-          ),
+          label: Text("Apply Improvisation",
+              style: GoogleFonts.poppins(
+                  color: kTextColor, fontWeight: FontWeight.bold)),
           onPressed: () {
             Navigator.pushReplacement(
                 context,
                 PageTransition(
-                    child: Screen2(),
+                    child: Screen3(),
                     type: PageTransitionType.fade,
                     duration: Duration(seconds: 2)));
           },

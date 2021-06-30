@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:power_hub/screens/circuit_screens/screen2/screen2.dart';
 import 'package:power_hub/services/auth.dart';
 import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
 import 'package:power_hub/shared/colors.dart';
 
-class Screen1 extends StatefulWidget {
+class Screen3 extends StatefulWidget {
   @override
-  _Screen1State createState() => _Screen1State();
+  _Screen3State createState() => _Screen3State();
 }
 
-class _Screen1State extends State<Screen1> {
+class _Screen3State extends State<Screen3> {
   AuthService _auth = AuthService();
   bool isLoading = false;
   @override
@@ -79,7 +77,7 @@ class _Screen1State extends State<Screen1> {
                 height: size.height * 0.03,
               ),
               Text(
-                "Without Commutation Failure",
+                "Inverter after Improvisation",
                 style: GoogleFonts.poppins(
                     color: kTextColor, fontSize: size.width * 0.05),
               ),
@@ -88,7 +86,7 @@ class _Screen1State extends State<Screen1> {
               ),
               Container(
                 child: Image.asset(
-                  'assets/one1.PNG',
+                  'assets/three.PNG',
                 ),
               ),
             ],
@@ -105,19 +103,15 @@ class _Screen1State extends State<Screen1> {
         ]),
         floatingActionButton: FloatingActionButton.extended(
           label: Text(
-            "Apply Error",
+            "Team Info",
             style: GoogleFonts.poppins(
                 color: kTextColor, fontWeight: FontWeight.bold),
           ),
           onPressed: () {
-            Navigator.pushReplacement(
-                context,
-                PageTransition(
-                    child: Screen2(),
-                    type: PageTransitionType.fade,
-                    duration: Duration(seconds: 2)));
+            Navigator.push(context,
+                PageTransition(child: null, type: PageTransitionType.fade));
           },
-          icon: Icon(Icons.electrical_services_outlined),
+          icon: Icon(Icons.info_outline_rounded),
         ),
       ),
     );
