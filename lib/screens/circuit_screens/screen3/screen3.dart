@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:power_hub/screens/info.dart';
 import 'package:power_hub/services/auth.dart';
 import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
 import 'package:power_hub/shared/colors.dart';
@@ -103,13 +104,13 @@ class _Screen3State extends State<Screen3> {
         ]),
         floatingActionButton: FloatingActionButton.extended(
           label: Text(
-            "Team Info",
+            "App Info",
             style: GoogleFonts.poppins(
                 color: kTextColor, fontWeight: FontWeight.bold),
           ),
           onPressed: () {
             Navigator.push(context,
-                PageTransition(child: null, type: PageTransitionType.fade));
+                PageTransition(child: Info(), type: PageTransitionType.fade));
           },
           icon: Icon(Icons.info_outline_rounded),
         ),

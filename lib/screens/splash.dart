@@ -12,7 +12,7 @@ class Splash extends StatelessWidget {
     return AnimatedSplashScreen(
       duration: 3000,
       backgroundColor: kprimary,
-      splash: 'assets/splash.png',
+      splash: 'assets/splash1.png',
       splashIconSize: size.width,
       nextScreen: Introduction(),
       splashTransition: SplashTransition.fadeTransition,
