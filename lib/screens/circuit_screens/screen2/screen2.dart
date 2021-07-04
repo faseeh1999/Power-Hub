@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:power_hub/screens/circuit_screens/screen2/state2.dart';
 import 'package:power_hub/screens/circuit_screens/screen3/screen3.dart';
 import 'package:power_hub/services/auth.dart';
 import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
@@ -110,7 +111,7 @@ class _Screen2State extends State<Screen2> {
             Navigator.pushReplacement(
                 context,
                 PageTransition(
-                    child: Screen3(),
+                    child: State2(),
                     type: PageTransitionType.fade,
                     duration: Duration(seconds: 2)));
           },

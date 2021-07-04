@@ -115,7 +115,7 @@ class _Screen1State extends State<Screen1> {
                 PageTransition(
                     child: Screen2(),
                     type: PageTransitionType.fade,
-                    duration: Duration(seconds: 2)));
+                    duration: Duration(milliseconds: 1000)));
           },
           icon: Icon(Icons.electrical_services_outlined),
         ),

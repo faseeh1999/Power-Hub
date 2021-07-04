@@ -47,10 +47,50 @@ class Info extends StatelessWidget {
                 ],
               ),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    color: Colors.amber,
-                    child: Text("Hola"),
+                  SizedBox(
+                    height: size.height * 0.01,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(size.width * 0.04),
+                    child: Text(
+                      "Personal Intro",
+                      style: GoogleFonts.poppins(fontSize: size.width * 0.08),
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.01,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(size.width * 0.04),
+                    child: Text(
+                      "A Competent electrical engineer who have multiple skills in the major of Power in EE field. I am also interested in the field of Information Technology and an intermediate in Mobile App Development.",
+                      style: GoogleFonts.poppins(fontSize: size.width * 0.05),
+                      textAlign: TextAlign.justify,
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.01,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(size.width * 0.04),
+                    child: Text(
+                      "App Summary",
+                      style: GoogleFonts.poppins(fontSize: size.width * 0.08),
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.01,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(size.width * 0.04),
+                    child: Text(
+                      "A Competent electrical engineer who have multiple skills in the major of Power in EE field. I am also interested in the field of Information Technology and an intermediate in Mobile App Development.",
+                      style: GoogleFonts.poppins(fontSize: size.width * 0.05),
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
                 ],
               )
