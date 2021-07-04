@@ -21,7 +21,7 @@ class Info extends StatelessWidget {
                   Text(
                     "Saad Ahmad Khan",
                     style: GoogleFonts.poppins(
-                        color: kTextColor, fontSize: size.width * 0.08),
+                        color: Colors.amber, fontSize: size.width * 0.08),
                   ),
                   SizedBox(
                     height: size.height * 0.03,
@@ -57,7 +57,9 @@ class Info extends StatelessWidget {
                     padding: EdgeInsets.all(size.width * 0.04),
                     child: Text(
                       "Personal Intro",
-                      style: GoogleFonts.poppins(fontSize: size.width * 0.08),
+                      style: GoogleFonts.poppins(
+                          fontSize: size.width * 0.08,
+                          color: Colors.amber[800]),
                     ),
                   ),
                   SizedBox(
@@ -78,7 +80,9 @@ class Info extends StatelessWidget {
                     padding: EdgeInsets.all(size.width * 0.04),
                     child: Text(
                       "App Summary",
-                      style: GoogleFonts.poppins(fontSize: size.width * 0.08),
+                      style: GoogleFonts.poppins(
+                          fontSize: size.width * 0.08,
+                          color: Colors.amber[800]),
                     ),
                   ),
                   SizedBox(
@@ -87,7 +91,7 @@ class Info extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(size.width * 0.04),
                     child: Text(
-                      "A Competent electrical engineer who have multiple skills in the major of Power in EE field. I am also interested in the field of Information Technology and an intermediate in Mobile App Development.",
+                      "This app will provide the visualization of the circuit diagrams as well as the simulation waveforms of all the Converter Circuits of both Before and After Commutation Failures and after its improvement too.",
                       style: GoogleFonts.poppins(fontSize: size.width * 0.05),
                       textAlign: TextAlign.justify,
                     ),

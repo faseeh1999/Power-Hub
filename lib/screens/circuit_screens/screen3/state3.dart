@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:power_hub/screens/circuit_screens/screen2/screen2.dart';
 import 'package:power_hub/screens/circuit_screens/screen3/screen3.dart';
 import 'package:power_hub/shared/colors.dart';
 import 'package:power_hub/shared/loader.dart';
 
-class State2 extends StatefulWidget {
+class State3 extends StatefulWidget {
   @override
-  _State2State createState() => _State2State();
+  _State3State createState() => _State3State();
 }
 
-class _State2State extends State<State2> {
+class _State3State extends State<State3> {
   @override
   void initState() {
     // TODO: implement initState
@@ -22,7 +21,7 @@ class _State2State extends State<State2> {
           PageTransition(
               type: PageTransitionType.fade,
               duration: Duration(milliseconds: 300),
-              child: Screen2()));
+              child: Screen3()));
     });
   }
 
@@ -49,6 +48,5 @@ class _State2State extends State<State2> {
         ],
       ),
     );
-    ;
   }
 }

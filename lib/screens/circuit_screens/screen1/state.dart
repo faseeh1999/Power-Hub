@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:power_hub/screens/circuit_screens/screen1/screen1.dart';
 import 'package:power_hub/screens/circuit_screens/screen2/screen2.dart';
 import 'package:power_hub/shared/colors.dart';
 import 'package:power_hub/shared/loader.dart';
@@ -22,7 +23,7 @@ class _CenterStateState extends State<CenterState> {
           PageTransition(
               type: PageTransitionType.fade,
               duration: Duration(milliseconds: 300),
-              child: Screen2()));
+              child: Screen1()));
     });
   }
 

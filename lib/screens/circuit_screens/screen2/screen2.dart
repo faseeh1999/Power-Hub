@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:power_hub/screens/circuit_screens/screen2/state2.dart';
 import 'package:power_hub/screens/circuit_screens/screen3/screen3.dart';
+import 'package:power_hub/screens/circuit_screens/screen3/state3.dart';
 import 'package:power_hub/services/auth.dart';
 import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
 import 'package:power_hub/shared/colors.dart';
@@ -111,7 +112,7 @@ class _Screen2State extends State<Screen2> {
             Navigator.pushReplacement(
                 context,
                 PageTransition(
-                    child: State2(),
+                    child: State3(),
                     type: PageTransitionType.fade,
                     duration: Duration(seconds: 2)));
           },
