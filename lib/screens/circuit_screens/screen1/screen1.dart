@@ -99,7 +99,7 @@ class _Screen1State extends State<Screen1> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
-                child: Expanded(child: LineChartSample2()),
+                child: LineChartSample2(),
               )
             ],
           )
