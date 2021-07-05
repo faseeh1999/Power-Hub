@@ -8,3 +8,9 @@ Color kGraphLineColor = Colors.black;
 
 //Color kTextColor = Color(0xfff6f6f8);
 Color kTextColor = Colors.black;
+List<Color> gradientColors = [
+  //const Color(0xff23b6e6),
+
+  Colors.amber,
+  Colors.orange
+];
