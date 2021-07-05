@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:power_hub/screens/info.dart';
 import 'package:power_hub/services/auth.dart';
-import 'package:power_hub/screens/circuit_screens/screen1/chartTest.dart';
+import 'package:power_hub/screens/circuit_screens/screen3/chartTest.dart';
 import 'package:power_hub/shared/colors.dart';
 
 class Screen3 extends StatefulWidget {
@@ -97,7 +97,7 @@ class _Screen3State extends State<Screen3> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
-                child: Expanded(child: LineChartSample2()),
+                child: LineChartSample2(),
               )
             ],
           )

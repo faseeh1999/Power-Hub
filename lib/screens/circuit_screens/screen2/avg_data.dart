@@ -2,20 +2,21 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:power_hub/shared/colors.dart';
 
-LineChartData mainData() {
+LineChartData avgData() {
   return LineChartData(
+    lineTouchData: LineTouchData(enabled: false),
     gridData: FlGridData(
       show: true,
-      drawVerticalLine: false,
-      getDrawingHorizontalLine: (value) {
+      drawHorizontalLine: true,
+      getDrawingVerticalLine: (value) {
         return FlLine(
-          color: Colors.black,
+          color: const Color(0xff37434d),
           strokeWidth: 1,
         );
       },
-      getDrawingVerticalLine: (value) {
+      getDrawingHorizontalLine: (value) {
         return FlLine(
-          color: Colors.black,
+          color: const Color(0xff37434d),
           strokeWidth: 1,
         );
       },
@@ -24,33 +25,21 @@ LineChartData mainData() {
       show: true,
       bottomTitles: SideTitles(
         showTitles: true,
-        reservedSize: 2,
+        reservedSize: 22,
         getTextStyles: (value) => const TextStyle(
             color: Color(0xff68737d),
-            fontWeight: FontWeight.normal,
+            fontWeight: FontWeight.bold,
             fontSize: 16),
         getTitles: (value) {
-          // if (value == 0.00) {
-          //   return '0.050';
-          // }
-          // if (value == 0.200) {
-          //   return '0.10';
-          // }
           switch (value.toInt()) {
-            case 0:
-              return '0.000';
-            case 1:
-              return '0.200';
             case 2:
-              return '0.300';
-            case 3:
-              return '0.400';
-
+              return '0.050';
             case 4:
-              return '0.500';
-
-            case 5:
-              return '0.600';
+              return '0.100';
+            case 6:
+              return '0.150';
+            case 8:
+              return '0.200';
           }
           return '';
         },
@@ -64,14 +53,7 @@ LineChartData mainData() {
           fontSize: 15,
         ),
         getTitles: (value) {
-          // if (value.toDouble() == 0) {
-          //   return '-0.100';
-          // } else if (value.toDouble() == 0.2044) {
-          //   return '0.200';
-          // }
           switch (value.toInt()) {
-            case 0:
-              return '0.000';
             case 1:
               return '0.200';
             case 2:
@@ -82,12 +64,12 @@ LineChartData mainData() {
             case 4:
               return '0.800';
 
-            // case 5:
-            //   return '1.000';
+            case 5:
+              return '1.000';
           }
           return '';
         },
-        reservedSize: 30,
+        reservedSize: 28,
         margin: 12,
       ),
     ),
@@ -303,18 +285,26 @@ LineChartData mainData() {
           FlSpot(0.199 * 5, 0.4405 * 5),
           FlSpot(0.200 * 5, 0.4493 * 5),
         ],
-        isCurved: true,
-        colors: gradientColors,
-        barWidth: 2.5,
+        isCurved: false,
+        colors: [
+          ColorTween(begin: gradientColors[0], end: gradientColors[1])
+              .lerp(0.2),
+          ColorTween(begin: gradientColors[0], end: gradientColors[1])
+              .lerp(0.2),
+        ],
+        barWidth: 5,
         isStrokeCapRound: true,
         dotData: FlDotData(
           show: false,
         ),
-        belowBarData: BarAreaData(
-          show: true,
-          colors:
-              gradientColors.map((color) => color.withOpacity(0.3)).toList(),
-        ),
+        belowBarData: BarAreaData(show: true, colors: [
+          ColorTween(begin: gradientColors[0], end: gradientColors[1])
+              .lerp(0.2)
+              .withOpacity(0.1),
+          ColorTween(begin: gradientColors[0], end: gradientColors[1])
+              .lerp(0.2)
+              .withOpacity(0.1),
+        ]),
       ),
     ],
   );
