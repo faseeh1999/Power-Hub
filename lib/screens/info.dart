@@ -7,7 +7,7 @@ class Info extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return DefaultTabController(
-      length: 2,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
@@ -32,7 +32,7 @@ class Info extends StatelessWidget {
                         color: kTextColor, fontSize: size.width * 0.04),
                   ),
                   SizedBox(
-                    height: size.height * 0.03,
+                    height: size.height * 0.05,
                   ),
                   Container(
                     color: Colors.amber,
@@ -47,57 +47,104 @@ class Info extends StatelessWidget {
                 ],
               ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: size.height * 0.01,
+                    height: size.height * 0.03,
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(size.width * 0.04),
-                    child: Text(
-                      "Personal Intro",
-                      style: GoogleFonts.poppins(
-                          fontSize: size.width * 0.08,
-                          color: Colors.amber[800]),
+                  Text(
+                    "Agha Noor Ur Rehman",
+                    style: GoogleFonts.poppins(
+                        color: Colors.amber, fontSize: size.width * 0.08),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.03,
+                  ),
+                  Text(
+                    "Electrical Engineer",
+                    style: GoogleFonts.poppins(
+                        color: kTextColor, fontSize: size.width * 0.04),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.05,
+                  ),
+                  Container(
+                    color: Colors.amber,
+                    child: Image.asset(
+                      'assets/noor.jpg',
+                      fit: BoxFit.fill,
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.01,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(size.width * 0.04),
-                    child: Text(
-                      "A Competent electrical engineer who have multiple skills in the major of Power in EE field. I am also interested in the field of Information Technology and an intermediate in Mobile App Development.",
-                      style: GoogleFonts.poppins(fontSize: size.width * 0.05),
-                      textAlign: TextAlign.justify,
-                    ),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.01,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(size.width * 0.04),
-                    child: Text(
-                      "App Summary",
-                      style: GoogleFonts.poppins(
-                          fontSize: size.width * 0.08,
-                          color: Colors.amber[800]),
-                    ),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.01,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(size.width * 0.04),
-                    child: Text(
-                      "This app will provide the visualization of the circuit diagrams as well as the simulation waveforms of all the Converter Circuits of both Before and After Commutation Failures and after its improvement too.",
-                      style: GoogleFonts.poppins(fontSize: size.width * 0.05),
-                      textAlign: TextAlign.justify,
-                    ),
-                  ),
+                    height: size.height * 0.03,
+                  )
                 ],
-              )
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    height: size.height * 0.03,
+                  ),
+                  Text(
+                    "Ahmad Zahoor",
+                    style: GoogleFonts.poppins(
+                        color: Colors.amber, fontSize: size.width * 0.08),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.03,
+                  ),
+                  Text(
+                    "Electrical Engineer",
+                    style: GoogleFonts.poppins(
+                        color: kTextColor, fontSize: size.width * 0.04),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.05,
+                  ),
+                  Container(
+                    color: Colors.amber,
+                    child: Image.asset(
+                      'assets/zahoor.jpg',
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.03,
+                  )
+                ],
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    height: size.height * 0.03,
+                  ),
+                  Text(
+                    "Aqib Siddique",
+                    style: GoogleFonts.poppins(
+                        color: Colors.amber, fontSize: size.width * 0.08),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.03,
+                  ),
+                  Text(
+                    "Electrical Engineer",
+                    style: GoogleFonts.poppins(
+                        color: kTextColor, fontSize: size.width * 0.04),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.05,
+                  ),
+                  Container(
+                    color: Colors.amber,
+                    child: Image.asset(
+                      'assets/aqib.jpg',
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.03,
+                  )
+                ],
+              ),
             ],
           ),
         ),

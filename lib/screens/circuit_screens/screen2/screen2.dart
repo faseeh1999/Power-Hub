@@ -105,7 +105,7 @@ class _Screen2State extends State<Screen2> {
         floatingActionButton: FloatingActionButton.extended(
           label: Text("Apply Improvisation",
               style: GoogleFonts.poppins(
-                  color: kTextColor, fontWeight: FontWeight.bold)),
+                  color: kTextColor, fontWeight: FontWeight.w500)),
           onPressed: () {
             Navigator.pushReplacement(
                 context,

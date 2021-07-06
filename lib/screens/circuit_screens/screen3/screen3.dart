@@ -104,9 +104,9 @@ class _Screen3State extends State<Screen3> {
         ]),
         floatingActionButton: FloatingActionButton.extended(
           label: Text(
-            "App Info",
+            "Team Info",
             style: GoogleFonts.poppins(
-                color: kTextColor, fontWeight: FontWeight.bold),
+                color: kTextColor, fontWeight: FontWeight.w500),
           ),
           onPressed: () {
             Navigator.push(context,

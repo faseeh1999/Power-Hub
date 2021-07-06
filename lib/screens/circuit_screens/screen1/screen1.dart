@@ -108,7 +108,7 @@ class _Screen1State extends State<Screen1> {
           label: Text(
             "Apply Error",
             style: GoogleFonts.poppins(
-                color: kTextColor, fontWeight: FontWeight.bold),
+                color: kTextColor, fontWeight: FontWeight.w500),
           ),
           onPressed: () {
             Navigator.pushReplacement(
